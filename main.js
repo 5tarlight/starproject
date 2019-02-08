@@ -1,6 +1,6 @@
 const express = require('express')
 const http = require('http')
-const SLog = require('./lib/slog')
+const som = require('./lib/socket/main')
 
 const app = express()
 
@@ -10,16 +10,6 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/lib/public/index.html');
 });
 
-const server = http.createServer(app).listen(app.get('port'), () => {
+som.init(http.createServer(app).listen(app.get('port'), () => {
   console.log("Server Ready")
-})
-
-const io = require('socket.io')(server)
-
-io.on('connection', (socket) => {
-  console.log('client connected')
-  
-  socket.on('msg', (data) => {
-    SLog.info('message : ' + data.msg)
-  })
-})
+}))
