@@ -1,5 +1,6 @@
 const express = require('express')
 const http = require('http')
+const SLog = require('./lib/slog')
 
 const app = express()
 
@@ -19,6 +20,6 @@ io.on('connection', (socket) => {
   console.log('client connected')
   
   socket.on('msg', (data) => {
-    console.log('message : ' + data.msg)
+    SLog.err('message : ' + data.msg)
   })
 })
