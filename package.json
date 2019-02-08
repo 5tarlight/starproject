@@ -1,0 +1,14 @@
+{
+  "name": "starproject",
+  "version": "1.0.0",
+  "description": "nothing",
+  "main": "main.js",
+  "repository": "git@github.com:5tarlight/starproject.git",
+  "author": "5tarlight <developerstarlight@gmail.com>",
+  "license": "GPL-3.0",
+  "private": null,
+  "dependencies": {
+    "express": "^4.16.4",
+    "http": "^0.0.0"
+  }
+}
