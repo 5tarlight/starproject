@@ -359,6 +359,13 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
+express-error-handler@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/express-error-handler/-/express-error-handler-1.1.0.tgz#ff2edb1fedcfcab1e601c60aab3554982f1f6497"
+  integrity sha1-/y7bH+3PyrHmAcYKqzVUmC8fZJc=
+  dependencies:
+    mout "0.12.0"
+
 express-session@^1.15.6:
   version "1.15.6"
   resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.15.6.tgz#47b4160c88f42ab70fe8a508e31cbff76757ab0a"
@@ -590,6 +597,11 @@ mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
   integrity sha512-KI1+qOZu5DcW6wayYHSzR/tXKCDC5Om4s1z2QJjDULzLcmf3DvzS7oluY4HCTrc+9FiKmWUgeNLg7W3uIQvxtQ==
+
+mout@0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/mout/-/mout-0.12.0.tgz#6d5b242ee331f9d04c68e58f77a91a3060e8cacb"
+  integrity sha1-bVskLuMx+dBMaOWPd6kaMGDoyss=
 
 ms@2.0.0:
   version "2.0.0"
