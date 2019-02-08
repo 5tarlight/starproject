@@ -5,6 +5,7 @@ const cookie = require('cookie-parser')
 const session = require('express-session')
 const eeh = require('express-error-handler')
 const path = require('path')
+const loader = require('./lib/public/routes/loader')
 
 const app = express()
 
@@ -20,6 +21,8 @@ app.use(session({
 }))
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
+loader.init(app, express.Router())
+
 const eh = eeh({
   static: {
     '404': './public/404.html'
@@ -28,10 +31,6 @@ const eh = eeh({
 
 app.use(eeh.httpError(404))
 app.use(eh)
-
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/lib/public/index.html');
-});
 
 som.init(http.createServer(app).listen(app.get('port'), () => {
   console.log("Server Ready")
