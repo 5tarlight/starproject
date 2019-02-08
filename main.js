@@ -4,6 +4,7 @@ const som = require('./lib/socket/main')
 const cookie = require('cookie-parser')
 const session = require('express-session')
 const eeh = require('express-error-handler')
+const path = require('path')
 
 const app = express()
 
