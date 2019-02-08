@@ -9,6 +9,8 @@ const path = require('path')
 const app = express()
 
 app.set('port', 80)
+app.set('views', __dirname + '/lib/public/routes/views')
+app.set('view engine', 'pug')
 
 app.use(cookie())
 app.use(session({
