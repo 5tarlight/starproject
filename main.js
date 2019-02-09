@@ -9,6 +9,7 @@ const eeh = require('express-error-handler')
 const path = require('path')
 const loader = require('./lib/public/routes/loader')
 const parser = require('body-parser')
+const SECRET = require('./lib/config/session').secret
 
 const app = express()
 
@@ -20,7 +21,7 @@ app.use(parser.urlencoded({ extended: false }))
 app.use(parser.json())
 app.use(cookie())
 app.use(session({
-  secret: 'my key',
+  secret: SECRET,
   resave: true,
   saveUninitialized: true
 }))
@@ -36,6 +37,9 @@ const eh = eeh({
 
 app.use(eeh.httpError(404))
 app.use(eh)
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 som.init(http.createServer(app).listen(app.get('port'), () => {
   console.log("Server Ready")
