@@ -31,15 +31,12 @@ loader.init(app, express.Router())
 
 const eh = eeh({
   static: {
-    '404': './public/404.html'
+    '404': './lib/public/404.html'
   }
 })
 
 app.use(eeh.httpError(404))
 app.use(eh)
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 som.init(http.createServer(app).listen(app.get('port'), () => {
   console.log("Server Ready")
