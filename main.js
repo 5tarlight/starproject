@@ -10,6 +10,7 @@ const path = require('path')
 const loader = require('./lib/public/routes/loader')
 const parser = require('body-parser')
 const SECRET = require('./lib/config/session').secret
+const SLog = require('./lib/slog')
 
 const app = express()
 
@@ -41,3 +42,7 @@ app.use(eh)
 som.init(http.createServer(app).listen(app.get('port'), () => {
   console.log("Server Ready")
 }))
+
+process.on('uncaughtException', (err) => {
+  SLog.err(err.stack)
+})
