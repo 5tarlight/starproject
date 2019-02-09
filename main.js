@@ -28,7 +28,7 @@ app.use(session({
 }))
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-loader.init(app, express.Router())
+loader.init(app)
 
 const eh = eeh({
   static: {
