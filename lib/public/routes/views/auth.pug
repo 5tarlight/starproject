@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset='utf8')
+    title Auth
+  body
+    form(action="/process/auth" method='post')
+      table
+        tr
+          td
+            lable 아이디
+          td
+            input(name='username' type='text')
+        tr
+          td
+            lable 비밀번호
+          td
+            input(name='password' type='password')
+    input(type='submit' value='회원가입')
