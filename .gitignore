@@ -62,3 +62,4 @@ typings/
 
 lib/config/session.js
 lib/public/routes/views/*.html
+lib/config/database.js
