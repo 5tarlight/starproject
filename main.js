@@ -6,6 +6,7 @@ const session = require('express-session')
 const eeh = require('express-error-handler')
 const path = require('path')
 const loader = require('./lib/public/routes/loader')
+const parser = require('body-parser')
 
 const app = express()
 
@@ -13,6 +14,8 @@ app.set('port', 80)
 app.set('views', __dirname + '/lib/public/routes/views')
 app.set('view engine', 'pug')
 
+app.use(parser.urlencoded({ extended: false }))
+app.use(parser.json())
 app.use(cookie())
 app.use(session({
   secret: 'my key',
