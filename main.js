@@ -40,7 +40,7 @@ app.use(eeh.httpError(404))
 app.use(eh)
 
 som.init(http.createServer(app).listen(app.get('port'), () => {
-  console.log("Server Ready")
+  SLog.comp('Server On')
 }))
 
 process.on('uncaughtException', (err) => {
