@@ -1,0 +1,11 @@
+header {
+  width: 100%;
+  background-color: #000725;
+  margin-bottom: 5px;
+}
+
+span, b {
+  color: white;
+  margin: 10px;
+  font-size: 15px;
+}
