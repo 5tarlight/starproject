@@ -1,10 +1,11 @@
-# starproject
+# STARPROJECT
+- A simple project by Starlight
 
-## installation
+## Installation
 > yarn add
 
-## author
+## Author
 - Starlight (developerstarlight@gmail.com)
 
-## licence
+## License
 - GPL-3.0
