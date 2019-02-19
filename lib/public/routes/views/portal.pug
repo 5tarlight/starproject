@@ -9,5 +9,7 @@ html
     h1 Starlight
       span.label.label-info#dev DEV
     
-    div.alert.alert-warning(role='alert') 
+    div(role='alert' class="alert alert-warning alert-dismissible") 
+      button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+        span(aria-hidden="true") &times;
       b WAWRNING! Starlight의 엄청난 개발실력에 눈이 멀어 버릴 수 있습니다!
