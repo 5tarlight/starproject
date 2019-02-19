@@ -3,7 +3,11 @@ html
   head
     meta(charset='utf8')
     title WELCOME
+    link(type='text/css' rel='stylesheet' href='/routes/views/css/portal.css')
   body
     include ./header.pug
     h1 Starlight
-      span.label.label-info DEV
+      span.label.label-info#dev DEV
+    
+    div.alert.alert-warning(role='alert') 
+      b WAWRNING! Starlight의 엄청난 개발실력에 눈이 멀어 버릴 수 있습니다!
