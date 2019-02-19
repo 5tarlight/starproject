@@ -4,7 +4,7 @@ header {
   margin-bottom: 5px;
 }
 
-span, b {
+.link {
   color: white;
   margin: 10px;
   font-size: 15px;
