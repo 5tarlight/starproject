@@ -3,14 +3,16 @@ html
   head
     meta(charset='utf8')
     title Auth
+    link(type='text/css' rel='stylesheet' href='/routes/views/css/login.css')
   body
     include ./header.pug
-    form(action="/process/login" method='post')
-      table
-        tr
-          td
-            input(class='form-control' placeholder='Username' name='username' type='text')
-        tr
-          td
-            input(class='form-control' placeholder='Password' name='password' type='password')
-      input(type='submit' value='로그인' name='')
+    div#submit.panel-body
+      form(action="/process/auth" method='post')
+        table
+          tr
+            td
+              input( type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" name='usename')
+          tr
+            td
+              input( type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" name='password')
+        input(class="btn btn-default" type="submit" name='' value='로그인')
