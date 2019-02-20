@@ -9,14 +9,13 @@ html
     link(rel='stylesheet', type='text/css', href='/routes/views/css/balloon.css')
     script(src="https://code.jquery.com/jquery-3.3.1.min.js")
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
-    script(src='/routes/views/js/balloon.js')
   body
     header
       table
         tr
-          td.show-balloon(onClick='window.location.href="/"' class='header' title='홈')
+          td(onClick='window.location.href="/"' class='header show-balloon' title='홈')
             span.link(class='glyphicon glyphicon-home', aria-hidden="true")
-          td.show-balloon(onClick='window.location.href="/login"' class='header' title='로그인')
+          td(onClick='window.location.href="/login"' class='header show-balloonr' title='로그인')
             b.link Sign In
-          td.show-balloon(onClick='window.location.href="/auth"' class='header' title='회원가입')
+          td(onClick='window.location.href="/auth"' class='header show-balloon' title='회원가입')
             b.link Sign Up
