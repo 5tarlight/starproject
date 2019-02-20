@@ -4,9 +4,11 @@ html
     meta(charset='utf8')
     title Auth
     link(type='text/css' rel='stylesheet' href='/routes/views/css/auth.css')
+    script(src='/routes/views/js/auth.js')
   body
     include ./header.pug
-    div#submit.panel-body
+    
+    #submit.panel-body
       form(action="/process/auth" method='post')
         table
           tr
