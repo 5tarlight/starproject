@@ -6,15 +6,17 @@ html
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css')
     link(rel='stylesheet', type='text/css', href='/routes/views/css/header.css')
+    link(rel='stylesheet', type='text/css', href='/routes/views/css/balloon.css')
     script(src="https://code.jquery.com/jquery-3.3.1.min.js")
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+    script(src='/routes/views/js/balloon.js')
   body
     header
       table
         tr
-          td(onClick='window.location.href="/"' class='header')
+          td.show-balloon(onClick='window.location.href="/"' class='header' title='홈')
             span.link(class='glyphicon glyphicon-home', aria-hidden="true")
-          td(onClick='window.location.href="/login"' class='header')
+          td.show-balloon(onClick='window.location.href="/login"' class='header' title='로그인')
             b.link Sign In
-          td(onClick='window.location.href="/auth"' class='header')
+          td.show-balloon(onClick='window.location.href="/auth"' class='header' title='회원가입')
             b.link Sign Up
