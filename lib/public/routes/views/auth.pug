@@ -4,17 +4,18 @@ html
     meta(charset='utf8')
     title Auth
     link(type='text/css' rel='stylesheet' href='/routes/views/css/auth.css')
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
     script(src='/routes/views/js/auth.js')
   body
     include ./header.pug
-    
+    .alert.alert-danger#alert(role='alert')
     #submit.panel-body
       form(action="/process/auth" method='post')
         table
           tr
             td
-              input( type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" name='usename')
+              input( id='username' type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" name='usename')
           tr
             td
-              input( type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" name='password')
+              input( id='password' type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" name='password')
         input(class="btn btn-default" type="submit" name='' value='회원가입')
